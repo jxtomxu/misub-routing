@@ -1,0 +1,30 @@
+name: Sync public upstream rules
+on:
+  schedule:
+    - cron: '17 20 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: routing-publish
+  cancel-in-progress: false
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements.txt
+      - run: ./scripts/sync-upstream
+      - run: ./scripts/validate
+      - name: Commit validated changes only
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add sources/cache dist
+          if ! git diff --cached --quiet; then
+            git commit -m 'chore: sync public routing rules'
+            git push
+          fi

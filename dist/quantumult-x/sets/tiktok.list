@@ -1,0 +1,37 @@
+# Source: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/TikTok/TikTok.list
+# Attribution: blackmatrix7/ios_rule_script; GPL-2.0; https://github.com/blackmatrix7/ios_rule_script
+HOST,lf16-effectcdn.byteeffecttos-g.com,GlobalMedia
+HOST,lf16-pkgcdn.pitaya-clientai.com,GlobalMedia
+HOST,p16-tiktokcdn-com.akamaized.net,GlobalMedia
+HOST,trae-api-sg.mchost.guru,GlobalMedia
+HOST-SUFFIX,bytedapm.com,GlobalMedia
+HOST-SUFFIX,bytegecko-i18n.com,GlobalMedia
+HOST-SUFFIX,byteintlapi.com,GlobalMedia
+HOST-SUFFIX,byteoversea.com,GlobalMedia
+HOST-SUFFIX,capcut.com,GlobalMedia
+HOST-SUFFIX,capcutapi.com,GlobalMedia
+HOST-SUFFIX,capcutapi.us,GlobalMedia
+HOST-SUFFIX,capcutstatic.com,GlobalMedia
+HOST-SUFFIX,ibytedtos.com,GlobalMedia
+HOST-SUFFIX,ibyteimg.com,GlobalMedia
+HOST-SUFFIX,ipstatp.com,GlobalMedia
+HOST-SUFFIX,isnssdk.com,GlobalMedia
+HOST-SUFFIX,marscode.com,GlobalMedia
+HOST-SUFFIX,muscdn.com,GlobalMedia
+HOST-SUFFIX,musical.ly,GlobalMedia
+HOST-SUFFIX,sgpstatp.com,GlobalMedia
+HOST-SUFFIX,snssdk.com,GlobalMedia
+HOST-SUFFIX,tik-tokapi.com,GlobalMedia
+HOST-SUFFIX,tiktok.com,GlobalMedia
+HOST-SUFFIX,tiktokcdn-us.com,GlobalMedia
+HOST-SUFFIX,tiktokcdn.com,GlobalMedia
+HOST-SUFFIX,tiktokd.net,GlobalMedia
+HOST-SUFFIX,tiktokd.org,GlobalMedia
+HOST-SUFFIX,tiktokmusic.app,GlobalMedia
+HOST-SUFFIX,tiktokv.com,GlobalMedia
+HOST-SUFFIX,tiktokv.us,GlobalMedia
+HOST-SUFFIX,trae.ai,GlobalMedia
+HOST-SUFFIX,ttwebview.com,GlobalMedia
+HOST-KEYWORD,musical.ly,GlobalMedia
+HOST-KEYWORD,tiktok,GlobalMedia
+USER-AGENT,TikTok*,GlobalMedia

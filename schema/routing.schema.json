@@ -1,0 +1,341 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "metadata",
+    "groups",
+    "rules",
+    "remote_rule_sets",
+    "dns",
+    "hosts",
+    "client_overrides"
+  ],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_version",
+        "name",
+        "description",
+        "updated_at"
+      ],
+      "properties": {
+        "schema_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "updated_at": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "groups": {
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 8,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "name",
+          "default"
+        ],
+        "properties": {
+          "name": {
+            "enum": [
+              "Proxy",
+              "Intelligence",
+              "Telegram",
+              "YouTube",
+              "Google",
+              "BiliBili",
+              "GlobalMedia",
+              "Emby"
+            ]
+          },
+          "default": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "rules": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "type",
+          "value",
+          "policy",
+          "priority",
+          "enabled",
+          "options",
+          "source"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "type": {
+            "enum": [
+              "DOMAIN",
+              "DOMAIN-SUFFIX",
+              "DOMAIN-KEYWORD",
+              "DOMAIN-WILDCARD",
+              "IP-CIDR",
+              "IP-CIDR6",
+              "RULE-SET",
+              "FINAL"
+            ]
+          },
+          "value": {
+            "type": "string"
+          },
+          "policy": {
+            "type": "string",
+            "minLength": 1
+          },
+          "priority": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "enabled": {
+            "type": "boolean"
+          },
+          "options": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "no_resolve": {
+                "type": "boolean"
+              }
+            }
+          },
+          "source": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "remote_rule_sets": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "upstream_url",
+          "source_format",
+          "target_formats",
+          "update_interval",
+          "attribution",
+          "enabled",
+          "min_rules"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]*$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "upstream_url": {
+            "type": "string",
+            "pattern": "^https://"
+          },
+          "source_format": {
+            "enum": [
+              "domain-set",
+              "surge-rule-set"
+            ]
+          },
+          "target_formats": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "enum": [
+                "quantumult-x",
+                "mihomo",
+                "shadowrocket"
+              ]
+            }
+          },
+          "update_interval": {
+            "type": "integer",
+            "minimum": 3600
+          },
+          "attribution": {
+            "type": "string",
+            "minLength": 1
+          },
+          "enabled": {
+            "type": "boolean"
+          },
+          "min_rules": {
+            "type": "integer",
+            "minimum": 1
+          }
+        }
+      }
+    },
+    "dns": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "servers",
+        "doh",
+        "doh_outbound",
+        "hijack",
+        "overrides"
+      ],
+      "properties": {
+        "servers": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "doh": {
+          "type": "string",
+          "minLength": 1
+        },
+        "doh_outbound": {
+          "type": "string",
+          "minLength": 1
+        },
+        "hijack": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "overrides": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "rule_set",
+              "servers"
+            ],
+            "properties": {
+              "rule_set": {
+                "type": "string",
+                "minLength": 1
+              },
+              "servers": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "hosts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "domain"
+        ],
+        "properties": {
+          "domain": {
+            "type": "string",
+            "minLength": 1
+          },
+          "ip": {
+            "type": "string",
+            "minLength": 1
+          },
+          "dns_server": {
+            "type": "string",
+            "minLength": 1
+          },
+          "rule_set": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "client_overrides": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "quantumult-x",
+        "mihomo",
+        "shadowrocket"
+      ],
+      "properties": {
+        "quantumult-x": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "dns_lines": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[^\\r\\n]+$"
+              }
+            }
+          }
+        },
+        "mihomo": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "dns": {
+              "type": "object"
+            },
+            "tun": {
+              "type": "object"
+            }
+          }
+        },
+        "shadowrocket": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "general_lines": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[^\\r\\n]+$"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

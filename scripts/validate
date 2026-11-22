@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+set -eu
+cd "$(dirname "$0")/.."
+python3 -c 'import sys;sys.path.insert(0,"generators");import build;build.load();print("Schema and policy references valid")'
+python3 tests/test_schema.py
+python3 tests/test_routing.py
+python3 tests/test_rollback.py
+python3 scripts/scan-secrets.py

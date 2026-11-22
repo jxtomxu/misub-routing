@@ -1,0 +1,33 @@
+# Source: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GitHub/GitHub.list
+# Attribution: blackmatrix7/ios_rule_script; GPL-2.0; https://github.com/blackmatrix7/ios_rule_script
+HOST-SUFFIX,atom.io,Proxy
+HOST-SUFFIX,dependabot.com,Proxy
+HOST-SUFFIX,ghcr.io,Proxy
+HOST-SUFFIX,git.io,Proxy
+HOST-SUFFIX,github-atom-io-herokuapp-com.freetls.fastly.net,Proxy
+HOST-SUFFIX,github-avatars.oss-cn-hongkong.aliyuncs.com,Proxy
+HOST-SUFFIX,github-cloud.s3.amazonaws.com,Proxy
+HOST-SUFFIX,github.blog,Proxy
+HOST-SUFFIX,github.com,Proxy
+HOST-SUFFIX,github.community,Proxy
+HOST-SUFFIX,github.dev,Proxy
+HOST-SUFFIX,github.io,Proxy
+HOST-SUFFIX,githubapp.com,Proxy
+HOST-SUFFIX,githubassets.com,Proxy
+HOST-SUFFIX,githubcopilot.com,Proxy
+HOST-SUFFIX,githubhackathon.com,Proxy
+HOST-SUFFIX,githubnext.com,Proxy
+HOST-SUFFIX,githubpreview.dev,Proxy
+HOST-SUFFIX,githubstatus.com,Proxy
+HOST-SUFFIX,githubuniverse.com,Proxy
+HOST-SUFFIX,githubusercontent.com,Proxy
+HOST-SUFFIX,myoctocat.com,Proxy
+HOST-SUFFIX,npm.community,Proxy
+HOST-SUFFIX,npmjs.com,Proxy
+HOST-SUFFIX,npmjs.org,Proxy
+HOST-SUFFIX,opensource.guide,Proxy
+HOST-SUFFIX,rawgit.com,Proxy
+HOST-SUFFIX,rawgithub.com,Proxy
+HOST-SUFFIX,repo.new,Proxy
+HOST-SUFFIX,thegithubshop.com,Proxy
+HOST-KEYWORD,github,Proxy

@@ -1,0 +1,8 @@
+IP-CIDR,127.0.0.0/8,direct,no-resolve
+IP-CIDR,10.0.0.0/8,direct,no-resolve
+IP-CIDR,172.16.0.0/12,direct,no-resolve
+IP-CIDR,192.168.0.0/16,direct,no-resolve
+IP-CIDR,169.254.0.0/16,direct,no-resolve
+IP6-CIDR,::1/128,direct,no-resolve
+IP6-CIDR,fc00::/7,direct,no-resolve
+IP6-CIDR,fe80::/10,direct,no-resolve

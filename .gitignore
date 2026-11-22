@@ -1,0 +1,13 @@
+/local/*
+!/local/*.example.yaml
+*.local.*
+.env
+.venv/
+__pycache__/
+*.pyc
+.build-*/
+.dist-backup/
+.DS_Store
+.serena/
+sources/.sync-*/
+sources/.cache-backup/

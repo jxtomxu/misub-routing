@@ -1,0 +1,328 @@
+# 模板：须通过本地覆写提供 LOCAL_SNELL、LOCAL_STATIC 和 MiSub URL。
+mixed-port: 7890
+allow-lan: false
+mode: rule
+ipv6: false
+proxy-providers:
+  MiSub:
+    type: http
+    url: https://example.invalid/LOCAL_MISUB_URL
+    interval: 3600
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 300
+proxies: []
+proxy-groups:
+- name: Proxy
+  type: select
+  proxies:
+  - REJECT
+  - DIRECT
+  - LOCAL_SNELL
+  - LOCAL_STATIC
+  use:
+  - MiSub
+- name: Intelligence
+  type: select
+  proxies:
+  - Proxy
+  - DIRECT
+  - LOCAL_SNELL
+  - LOCAL_STATIC
+  use:
+  - MiSub
+- name: Telegram
+  type: select
+  proxies:
+  - Proxy
+  - DIRECT
+  - LOCAL_SNELL
+  - LOCAL_STATIC
+  use:
+  - MiSub
+- name: YouTube
+  type: select
+  proxies:
+  - Proxy
+  - DIRECT
+  - LOCAL_SNELL
+  - LOCAL_STATIC
+  use:
+  - MiSub
+- name: Google
+  type: select
+  proxies:
+  - Proxy
+  - DIRECT
+  - LOCAL_SNELL
+  - LOCAL_STATIC
+  use:
+  - MiSub
+- name: BiliBili
+  type: select
+  proxies:
+  - DIRECT
+  - Proxy
+  - LOCAL_SNELL
+  - LOCAL_STATIC
+  use:
+  - MiSub
+- name: GlobalMedia
+  type: select
+  proxies:
+  - Proxy
+  - DIRECT
+  - LOCAL_SNELL
+  - LOCAL_STATIC
+  use:
+  - MiSub
+- name: Emby
+  type: select
+  proxies:
+  - DIRECT
+  - Proxy
+  - LOCAL_SNELL
+  - LOCAL_STATIC
+  use:
+  - MiSub
+dns:
+  enable: true
+  ipv6: false
+  default-nameserver: &id001
+  - 1.1.1.1
+  - 9.9.9.9
+  proxy-server-nameserver: *id001
+  nameserver:
+  - https://1.1.1.1/dns-query#LOCAL_SNELL
+  nameserver-policy:
+    rule-set:chinamax-dns:
+    - 223.5.5.5
+    - 223.6.6.6
+    +.bilibili.com:
+    - 223.5.5.5
+tun:
+  enable: false
+  dns-hijack:
+  - 8.8.8.8:53
+  - 8.8.4.4:53
+rule-providers:
+  ad-domainset:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/jxtomxu/misub-routing/main/dist/mihomo/sets/ad-domainset.list
+    path: ./rules/ad-domainset.list
+    interval: 86400
+  ad-extra:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/jxtomxu/misub-routing/main/dist/mihomo/sets/ad-extra.list
+    path: ./rules/ad-extra.list
+    interval: 86400
+  ai:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/jxtomxu/misub-routing/main/dist/mihomo/sets/ai.list
+    path: ./rules/ai.list
+    interval: 86400
+  apple:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/jxtomxu/misub-routing/main/dist/mihomo/sets/apple.list
+    path: ./rules/apple.list
+    interval: 86400
+  github:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/jxtomxu/misub-routing/main/dist/mihomo/sets/github.list
+    path: ./rules/github.list
+    interval: 86400
+  microsoft:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/jxtomxu/misub-routing/main/dist/mihomo/sets/microsoft.list
+    path: ./rules/microsoft.list
+    interval: 86400
+  telegram:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/jxtomxu/misub-routing/main/dist/mihomo/sets/telegram.list
+    path: ./rules/telegram.list
+    interval: 86400
+  epic:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/jxtomxu/misub-routing/main/dist/mihomo/sets/epic.list
+    path: ./rules/epic.list
+    interval: 86400
+  sony:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/jxtomxu/misub-routing/main/dist/mihomo/sets/sony.list
+    path: ./rules/sony.list
+    interval: 86400
+  steam:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/jxtomxu/misub-routing/main/dist/mihomo/sets/steam.list
+    path: ./rules/steam.list
+    interval: 86400
+  nintendo:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/jxtomxu/misub-routing/main/dist/mihomo/sets/nintendo.list
+    path: ./rules/nintendo.list
+    interval: 86400
+  youtube:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/jxtomxu/misub-routing/main/dist/mihomo/sets/youtube.list
+    path: ./rules/youtube.list
+    interval: 86400
+  netflix:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/jxtomxu/misub-routing/main/dist/mihomo/sets/netflix.list
+    path: ./rules/netflix.list
+    interval: 86400
+  disney:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/jxtomxu/misub-routing/main/dist/mihomo/sets/disney.list
+    path: ./rules/disney.list
+    interval: 86400
+  spotify:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/jxtomxu/misub-routing/main/dist/mihomo/sets/spotify.list
+    path: ./rules/spotify.list
+    interval: 86400
+  tiktok:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/jxtomxu/misub-routing/main/dist/mihomo/sets/tiktok.list
+    path: ./rules/tiktok.list
+    interval: 86400
+  bilibili:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/jxtomxu/misub-routing/main/dist/mihomo/sets/bilibili.list
+    path: ./rules/bilibili.list
+    interval: 86400
+  china-media:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/jxtomxu/misub-routing/main/dist/mihomo/sets/china-media.list
+    path: ./rules/china-media.list
+    interval: 86400
+  global-media:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/jxtomxu/misub-routing/main/dist/mihomo/sets/global-media.list
+    path: ./rules/global-media.list
+    interval: 86400
+  google:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/jxtomxu/misub-routing/main/dist/mihomo/sets/google.list
+    path: ./rules/google.list
+    interval: 86400
+  proxy:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/jxtomxu/misub-routing/main/dist/mihomo/sets/proxy.list
+    path: ./rules/proxy.list
+    interval: 86400
+  chinamax:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/jxtomxu/misub-routing/main/dist/mihomo/sets/chinamax.list
+    path: ./rules/chinamax.list
+    interval: 86400
+  chinamax-dns:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/jxtomxu/misub-routing/main/dist/mihomo/sets/chinamax-dns.list
+    path: ./rules/chinamax-dns.list
+    interval: 86400
+rules:
+- DOMAIN-SUFFIX,grok.com,Intelligence
+- DOMAIN-SUFFIX,deepseek.com,Intelligence
+- DOMAIN-SUFFIX,npmmirror.com,Proxy
+- DOMAIN-SUFFIX,linux.do,Proxy
+- DOMAIN-SUFFIX,zhihu.com,Proxy
+- DOMAIN-SUFFIX,juejin.cn,DIRECT
+- DOMAIN-SUFFIX,mini4k.com,DIRECT
+- RULE-SET,ad-domainset,REJECT
+- RULE-SET,ad-extra,REJECT
+- DOMAIN-SUFFIX,openai.com,Intelligence
+- DOMAIN-SUFFIX,chatgpt.com,Intelligence
+- DOMAIN-SUFFIX,oaistatic.com,Intelligence
+- DOMAIN-SUFFIX,oaiusercontent.com,Intelligence
+- DOMAIN-SUFFIX,anthropic.com,Intelligence
+- DOMAIN-SUFFIX,claude.ai,Intelligence
+- DOMAIN-SUFFIX,gemini.google.com,Intelligence
+- DOMAIN-SUFFIX,aistudio.google.com,Intelligence
+- DOMAIN-SUFFIX,ai.google.dev,Intelligence
+- DOMAIN-SUFFIX,generativelanguage.googleapis.com,Intelligence
+- DOMAIN-SUFFIX,deepseek.com,Intelligence
+- DOMAIN-SUFFIX,perplexity.ai,Intelligence
+- DOMAIN-SUFFIX,copilot.microsoft.com,Intelligence
+- DOMAIN-SUFFIX,x.ai,Intelligence
+- DOMAIN-SUFFIX,grok.com,Intelligence
+- RULE-SET,ai,Intelligence
+- DOMAIN-SUFFIX,apple.com.cn,DIRECT
+- DOMAIN-SUFFIX,icloud.com.cn,DIRECT
+- DOMAIN-SUFFIX,emby.media,Emby
+- RULE-SET,apple,DIRECT
+- RULE-SET,github,Proxy
+- RULE-SET,microsoft,DIRECT
+- RULE-SET,telegram,Telegram
+- RULE-SET,epic,DIRECT
+- RULE-SET,sony,DIRECT
+- RULE-SET,steam,DIRECT
+- RULE-SET,nintendo,DIRECT
+- RULE-SET,youtube,YouTube
+- RULE-SET,netflix,GlobalMedia
+- RULE-SET,disney,GlobalMedia
+- RULE-SET,spotify,GlobalMedia
+- RULE-SET,tiktok,GlobalMedia
+- RULE-SET,bilibili,BiliBili
+- RULE-SET,china-media,DIRECT
+- RULE-SET,global-media,GlobalMedia
+- RULE-SET,google,Google
+- RULE-SET,proxy,Proxy
+- RULE-SET,chinamax,DIRECT
+- IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+- IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+- IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+- IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+- IP-CIDR,169.254.0.0/16,DIRECT,no-resolve
+- IP-CIDR6,::1/128,DIRECT,no-resolve
+- IP-CIDR6,fc00::/7,DIRECT,no-resolve
+- IP-CIDR6,fe80::/10,DIRECT,no-resolve
+- MATCH,Proxy
+hosts: {}

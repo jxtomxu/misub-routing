@@ -1,0 +1,17 @@
+# Source: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Epic/Epic.list
+# Attribution: blackmatrix7/ios_rule_script; GPL-2.0; https://github.com/blackmatrix7/ios_rule_script
+HOST-SUFFIX,battlebreakers.com,direct
+HOST-SUFFIX,eac-cdn.com,direct
+HOST-SUFFIX,easy.ac,direct
+HOST-SUFFIX,easyanticheat.net,direct
+HOST-SUFFIX,epicgames.com,direct
+HOST-SUFFIX,epicgames.dev,direct
+HOST-SUFFIX,fortnite.com,direct
+HOST-SUFFIX,helpshift.com,direct
+HOST-SUFFIX,paragon.com,direct
+HOST-SUFFIX,playparagon.com,direct
+HOST-SUFFIX,roborecall.com,direct
+HOST-SUFFIX,shadowcomplex.com,direct
+HOST-SUFFIX,spyjinx.com,direct
+HOST-SUFFIX,unrealengine.com,direct
+HOST-SUFFIX,unrealtournament.com,direct

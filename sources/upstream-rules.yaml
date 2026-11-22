@@ -1,0 +1,2 @@
+# 来源的唯一配置见 ../schema/routing.yaml 的 remote_rule_sets。
+# 缓存供离线构建和上游故障回退；更新运行 scripts/sync-upstream。

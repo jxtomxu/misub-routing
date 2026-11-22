@@ -1,0 +1,8 @@
+# 复制成 private-overrides.yaml 后仅本地保存；此文件不是客户端可直接导入的配置。
+# 根据 docs/SETUP.md 在客户端中填写自己的节点订阅、节点与例外。
+# 不要使用下面的标识作为真实订阅或节点。
+misub_subscription_url: ""
+snell_node_name: ""
+static_landing_node_name: ""
+private_rules: []
+private_hosts: []

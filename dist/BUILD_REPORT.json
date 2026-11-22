@@ -1,0 +1,384 @@
+{
+  "configuration_limitations": {
+    "quantumult-x": "rule-set based DNS override is not generated",
+    "shadowrocket": "DNS host overrides and rule-set based DNS overrides are not generated"
+  },
+  "cross_source_duplicates": {
+    "different_policy": 921,
+    "handling": "preserved to retain first-match priority",
+    "same_policy": 563
+  },
+  "duplicates": {
+    "mihomo": {
+      "ad-domainset": 0,
+      "ad-extra": 0,
+      "ai": 0,
+      "apple": 0,
+      "bilibili": 0,
+      "china-media": 0,
+      "chinamax": 0,
+      "disney": 0,
+      "epic": 0,
+      "github": 0,
+      "global-media": 0,
+      "google": 0,
+      "microsoft": 0,
+      "netflix": 0,
+      "nintendo": 0,
+      "proxy": 0,
+      "sony": 0,
+      "spotify": 0,
+      "steam": 0,
+      "telegram": 0,
+      "tiktok": 0,
+      "youtube": 0
+    },
+    "quantumult-x": {
+      "ad-domainset": 0,
+      "ad-extra": 0,
+      "ai": 0,
+      "apple": 0,
+      "bilibili": 0,
+      "china-media": 0,
+      "chinamax": 0,
+      "disney": 0,
+      "epic": 0,
+      "github": 0,
+      "global-media": 0,
+      "google": 0,
+      "microsoft": 0,
+      "netflix": 0,
+      "nintendo": 0,
+      "proxy": 0,
+      "sony": 0,
+      "spotify": 0,
+      "steam": 0,
+      "telegram": 0,
+      "tiktok": 0,
+      "youtube": 0
+    },
+    "shadowrocket": {
+      "ad-domainset": 0,
+      "ad-extra": 0,
+      "ai": 0,
+      "apple": 0,
+      "bilibili": 0,
+      "china-media": 0,
+      "chinamax": 0,
+      "disney": 0,
+      "epic": 0,
+      "github": 0,
+      "global-media": 0,
+      "google": 0,
+      "microsoft": 0,
+      "netflix": 0,
+      "nintendo": 0,
+      "proxy": 0,
+      "sony": 0,
+      "spotify": 0,
+      "steam": 0,
+      "telegram": 0,
+      "tiktok": 0,
+      "youtube": 0
+    }
+  },
+  "sources": {
+    "ad-domainset": {
+      "attribution": "SukkaW/Surge; AGPL-3.0; https://github.com/SukkaW/Surge",
+      "count": 149658,
+      "sha256": "9d8f81207a67b15fd129b5c322543c60aca19121f6e635c6d7074b9a02b4c347",
+      "url": "https://ruleset.skk.moe/List/domainset/reject.conf"
+    },
+    "ad-extra": {
+      "attribution": "SukkaW/Surge; AGPL-3.0; https://github.com/SukkaW/Surge",
+      "count": 374,
+      "sha256": "a20731d45036217728e6324ac46acc34cf1b0ab077b63424c24fc500aa7a7d12",
+      "url": "https://ruleset.skk.moe/List/non_ip/reject.conf"
+    },
+    "ai": {
+      "attribution": "EAlyce/conf; MIT; https://github.com/EAlyce/conf",
+      "count": 357,
+      "sha256": "8ef15d97596795e9a49dc4e1b902088d310ffeb3d43195ac734857bfca28efef",
+      "url": "https://raw.githubusercontent.com/EAlyce/conf/refs/heads/main/Rule/OpenAI.list"
+    },
+    "apple": {
+      "attribution": "blackmatrix7/ios_rule_script; GPL-2.0; https://github.com/blackmatrix7/ios_rule_script",
+      "count": 1615,
+      "sha256": "e45e27cd85b876512dec54589fe2e0a5dc271eed4942016f023d43d5bb5a68a3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Apple/Apple_All_No_Resolve.list"
+    },
+    "bilibili": {
+      "attribution": "blackmatrix7/ios_rule_script; GPL-2.0; https://github.com/blackmatrix7/ios_rule_script",
+      "count": 133,
+      "sha256": "8537129301d5e4040d9f2b2255217458a16c96eef850ec22367352c512bc3988",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/BiliBili/BiliBili.list"
+    },
+    "china-media": {
+      "attribution": "blackmatrix7/ios_rule_script; GPL-2.0; https://github.com/blackmatrix7/ios_rule_script",
+      "count": 446,
+      "sha256": "d82e7315457f8aa1c4649df09d560e54dbc19757dc4fc5d8d2df0bd78a373079",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ChinaMedia/ChinaMedia.list"
+    },
+    "chinamax": {
+      "attribution": "blackmatrix7/ios_rule_script; GPL-2.0; https://github.com/blackmatrix7/ios_rule_script",
+      "count": 123124,
+      "sha256": "fcad7306827c9358007faa63e75289d4d1ea096c99ef3e50bd941103a01ca7f7",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ChinaMax/ChinaMax_All.list"
+    },
+    "disney": {
+      "attribution": "blackmatrix7/ios_rule_script; GPL-2.0; https://github.com/blackmatrix7/ios_rule_script",
+      "count": 175,
+      "sha256": "d0cfd6aee89d9d3075aef9dfadd98a2a3c6a2dba487f5091c801d1bcd70e9884",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Disney/Disney.list"
+    },
+    "epic": {
+      "attribution": "blackmatrix7/ios_rule_script; GPL-2.0; https://github.com/blackmatrix7/ios_rule_script",
+      "count": 15,
+      "sha256": "8f5fcadadd967023aa81273803de80beb2ceadd9af4e9352b565b3b00ccf464d",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Epic/Epic.list"
+    },
+    "github": {
+      "attribution": "blackmatrix7/ios_rule_script; GPL-2.0; https://github.com/blackmatrix7/ios_rule_script",
+      "count": 31,
+      "sha256": "ced8ab0ecda5775d04ec8ee6a57b282181108565331a6a1d85e9a26fee25d79b",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GitHub/GitHub.list"
+    },
+    "global-media": {
+      "attribution": "blackmatrix7/ios_rule_script; GPL-2.0; https://github.com/blackmatrix7/ios_rule_script",
+      "count": 2335,
+      "sha256": "cdad0ecd75c1d772f6492970a8ef60efcf4e0b6f12627766e78f2169bdbff122",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GlobalMedia/GlobalMedia_All_No_Resolve.list"
+    },
+    "google": {
+      "attribution": "blackmatrix7/ios_rule_script; GPL-2.0; https://github.com/blackmatrix7/ios_rule_script",
+      "count": 703,
+      "sha256": "4b08fd3ef47e2668d2a4bb79777773e2408394fdda60ac36014e1a4d3456ba6f",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Google/Google.list"
+    },
+    "microsoft": {
+      "attribution": "blackmatrix7/ios_rule_script; GPL-2.0; https://github.com/blackmatrix7/ios_rule_script",
+      "count": 673,
+      "sha256": "a2854b28dc9f903a64933c74fff5b50166e9bbebc70fdfce18c592f75793ff14",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Microsoft/Microsoft.list"
+    },
+    "netflix": {
+      "attribution": "blackmatrix7/ios_rule_script; GPL-2.0; https://github.com/blackmatrix7/ios_rule_script",
+      "count": 1158,
+      "sha256": "aa03f015949e8f6f981d90a7d8b1acf7e88472ee48601632bd964b0bb740f8aa",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Netflix/Netflix.list"
+    },
+    "nintendo": {
+      "attribution": "blackmatrix7/ios_rule_script; GPL-2.0; https://github.com/blackmatrix7/ios_rule_script",
+      "count": 126,
+      "sha256": "ca3cf3ea5051ed220c255fbccbdd93e477f1c558e26ada6bf3dbcc2ba0487da2",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Nintendo/Nintendo.list"
+    },
+    "proxy": {
+      "attribution": "blackmatrix7/ios_rule_script; GPL-2.0; https://github.com/blackmatrix7/ios_rule_script",
+      "count": 6993,
+      "sha256": "78c561b6900e08b8aaaceb76bac350731d1deadbffb4875d7fae29b6abd031c1",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Proxy/Proxy_All_No_Resolve.list"
+    },
+    "sony": {
+      "attribution": "blackmatrix7/ios_rule_script; GPL-2.0; https://github.com/blackmatrix7/ios_rule_script",
+      "count": 116,
+      "sha256": "c3c96668d832b2b4e94ab185c14e2931d6af99d5a106bb658b0d83160fc9a19f",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Sony/Sony.list"
+    },
+    "spotify": {
+      "attribution": "blackmatrix7/ios_rule_script; GPL-2.0; https://github.com/blackmatrix7/ios_rule_script",
+      "count": 31,
+      "sha256": "33bd52e8f23cda9374876259621c8fba21554035e20fa55daffbfcaee2109079",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Spotify/Spotify.list"
+    },
+    "steam": {
+      "attribution": "blackmatrix7/ios_rule_script; GPL-2.0; https://github.com/blackmatrix7/ios_rule_script",
+      "count": 69,
+      "sha256": "290ebccc4be56defc7d36f85d8c9777101548a4f2147ca29fe50b794c6a8dec7",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Steam/Steam.list"
+    },
+    "telegram": {
+      "attribution": "blackmatrix7/ios_rule_script; GPL-2.0; https://github.com/blackmatrix7/ios_rule_script",
+      "count": 46,
+      "sha256": "3b375bee8b2ff16d6c955804a5a3638e6e8fdfcc58d209506a928bdd4cc9891a",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Telegram/Telegram.list"
+    },
+    "tiktok": {
+      "attribution": "blackmatrix7/ios_rule_script; GPL-2.0; https://github.com/blackmatrix7/ios_rule_script",
+      "count": 36,
+      "sha256": "e61af08425f87c1bc81216364c0f8fffbfc0a9924aab89f133151f1ea56de6c2",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/TikTok/TikTok.list"
+    },
+    "youtube": {
+      "attribution": "blackmatrix7/ios_rule_script; GPL-2.0; https://github.com/blackmatrix7/ios_rule_script",
+      "count": 190,
+      "sha256": "42274e143447066e26e1ebbf21ae03ce6efb40827f41e2775a84fb16d390713d",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTube/YouTube.list"
+    }
+  },
+  "unsupported": {
+    "mihomo": {
+      "ad-domainset": {},
+      "ad-extra": {
+        "URL-REGEX": 3
+      },
+      "ai": {},
+      "apple": {
+        "USER-AGENT": 23
+      },
+      "bilibili": {
+        "USER-AGENT": 4
+      },
+      "china-media": {
+        "USER-AGENT": 35
+      },
+      "chinamax": {
+        "USER-AGENT": 65
+      },
+      "disney": {
+        "USER-AGENT": 1
+      },
+      "epic": {},
+      "github": {},
+      "global-media": {
+        "URL-REGEX": 1,
+        "USER-AGENT": 69
+      },
+      "google": {
+        "USER-AGENT": 3
+      },
+      "microsoft": {
+        "USER-AGENT": 3
+      },
+      "netflix": {
+        "USER-AGENT": 1
+      },
+      "nintendo": {},
+      "proxy": {
+        "USER-AGENT": 8
+      },
+      "sony": {},
+      "spotify": {
+        "USER-AGENT": 1
+      },
+      "steam": {},
+      "telegram": {
+        "OR": 1
+      },
+      "tiktok": {
+        "USER-AGENT": 1
+      },
+      "youtube": {
+        "USER-AGENT": 7
+      }
+    },
+    "quantumult-x": {
+      "ad-domainset": {},
+      "ad-extra": {
+        "URL-REGEX": 3
+      },
+      "ai": {},
+      "apple": {
+        "PROCESS-NAME": 13
+      },
+      "bilibili": {
+        "PROCESS-NAME": 6
+      },
+      "china-media": {
+        "PROCESS-NAME": 6
+      },
+      "chinamax": {
+        "PROCESS-NAME": 12
+      },
+      "disney": {
+        "PROCESS-NAME": 2
+      },
+      "epic": {},
+      "github": {},
+      "global-media": {
+        "PROCESS-NAME": 3,
+        "URL-REGEX": 1
+      },
+      "google": {
+        "PROCESS-NAME": 5
+      },
+      "microsoft": {
+        "PROCESS-NAME": 2
+      },
+      "netflix": {
+        "PROCESS-NAME": 1
+      },
+      "nintendo": {},
+      "proxy": {},
+      "sony": {},
+      "spotify": {
+        "PROCESS-NAME": 1
+      },
+      "steam": {},
+      "telegram": {
+        "OR": 1,
+        "PROCESS-NAME": 5
+      },
+      "tiktok": {
+        "PROCESS-NAME": 1
+      },
+      "youtube": {}
+    },
+    "shadowrocket": {
+      "ad-domainset": {},
+      "ad-extra": {
+        "URL-REGEX": 3
+      },
+      "ai": {},
+      "apple": {
+        "PROCESS-NAME": 13
+      },
+      "bilibili": {
+        "PROCESS-NAME": 6
+      },
+      "china-media": {
+        "PROCESS-NAME": 6
+      },
+      "chinamax": {
+        "PROCESS-NAME": 12
+      },
+      "disney": {
+        "PROCESS-NAME": 2
+      },
+      "epic": {},
+      "github": {},
+      "global-media": {
+        "PROCESS-NAME": 3,
+        "URL-REGEX": 1
+      },
+      "google": {
+        "PROCESS-NAME": 5
+      },
+      "microsoft": {
+        "PROCESS-NAME": 2
+      },
+      "netflix": {
+        "PROCESS-NAME": 1
+      },
+      "nintendo": {},
+      "proxy": {},
+      "sony": {},
+      "spotify": {
+        "PROCESS-NAME": 1
+      },
+      "steam": {},
+      "telegram": {
+        "OR": 1,
+        "PROCESS-NAME": 5
+      },
+      "tiktok": {
+        "PROCESS-NAME": 1
+      },
+      "youtube": {}
+    }
+  },
+  "uuid_domain_omissions": {
+    "ad-domainset": 2,
+    "chinamax": 1
+  }
+}
