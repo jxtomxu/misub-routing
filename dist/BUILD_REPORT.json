@@ -85,8 +85,8 @@
   "sources": {
     "ad-domainset": {
       "attribution": "SukkaW/Surge; AGPL-3.0; https://github.com/SukkaW/Surge",
-      "count": 149658,
-      "sha256": "9d8f81207a67b15fd129b5c322543c60aca19121f6e635c6d7074b9a02b4c347",
+      "count": 149822,
+      "sha256": "e826ec5c6899875f7a153795c63eaf000bb9c4f94bd69ea61ed2d373704decd6",
       "url": "https://ruleset.skk.moe/List/domainset/reject.conf"
     },
     "ad-extra": {
