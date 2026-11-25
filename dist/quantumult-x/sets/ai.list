@@ -200,6 +200,7 @@ HOST-SUFFIX,geller-pa.googleapis.com,Intelligence
 HOST-SUFFIX,gemini.google,Intelligence
 HOST-SUFFIX,gemini.google.com,Intelligence
 HOST-SUFFIX,gemini.gstatic.com,Intelligence
+HOST-SUFFIX,gemma.ai,Intelligence
 HOST-SUFFIX,generativeai.google,Intelligence
 HOST-SUFFIX,generativelanguage.googleapis.com,Intelligence
 HOST-SUFFIX,genspark.ai,Intelligence
