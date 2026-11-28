@@ -85,8 +85,8 @@
   "sources": {
     "ad-domainset": {
       "attribution": "SukkaW/Surge; AGPL-3.0; https://github.com/SukkaW/Surge",
-      "count": 152250,
-      "sha256": "467abeb69ea0094ed0e5b099faefa240ac09f096f6986f64aa229b3d3b3ff8fb",
+      "count": 146150,
+      "sha256": "c4cfa7d0a4a81eddf592a104c8af7ae26398df05523a192b15df84d5a8ce9f4f",
       "url": "https://ruleset.skk.moe/List/domainset/reject.conf"
     },
     "ad-extra": {
@@ -97,8 +97,8 @@
     },
     "ai": {
       "attribution": "EAlyce/conf; MIT; https://github.com/EAlyce/conf",
-      "count": 358,
-      "sha256": "15ef3ab8d7664defc5335418fc6712be8e39abdfda92d0fd9dbb255bf5804215",
+      "count": 357,
+      "sha256": "d933e88e2d7155907df766e2777fbf42c85f9ae245b59f46f6e844d80978e133",
       "url": "https://raw.githubusercontent.com/EAlyce/conf/refs/heads/main/Rule/OpenAI.list"
     },
     "apple": {
